@@ -157,3 +157,141 @@ The analysis identified suspicious POST activity targeting the `/contact` page a
 - Pattern searching with grep
 - Identifying suspicious network activity
 - Basic incident investigation
+
+
+# 🧾 Case 2: Windows Event Logs Investigation
+
+---
+
+## 📌 Scenario
+
+An organization reported a cyber attack where sensitive data was exfiltrated from a file server.  
+The security team identified a compromised system and requested an investigation into attacker activity prior to the breach.
+
+The objective is to analyze **Windows Security Event Logs** to determine:
+
+- Account creation activity  
+- Account modification behavior  
+- Evidence of persistence or privilege abuse  
+
+---
+
+## 🎯 Objectives
+
+- Identify newly created user accounts  
+- Determine who created the account  
+- Identify when the account was enabled  
+- Detect password reset activity  
+- Correlate events to understand attacker behavior  
+
+---
+
+## 🔍 Investigation Steps
+
+### 1. Identify Newly Created User Account
+
+```bash
+Filter Security logs for Event ID 4720
+```
+
+**Result**
+- New account created: **hacked**
+
+---
+
+### 2. Identify Who Created the Account
+
+```bash
+Review Event ID 4720 details
+```
+
+**Result**
+- Account created by: **Administrator**
+
+---
+
+### 3. Determine When the Account Was Created
+
+```bash
+Review timestamp of Event ID 4720
+```
+
+**Result**
+- Account creation date: **6/7/2024**
+
+---
+
+### 4. Investigate Password Reset Activity
+
+```bash
+Filter Security logs for Event ID 4724
+```
+
+**Result**
+- Password reset activity detected: **Yes**
+
+---
+
+## 📊 Findings
+
+- A new user account **“hacked”** was created on the system  
+- The account was created by the **Administrator account**  
+- The account was created on **6/7/2024**  
+- A **password reset event (Event ID 4724)** was identified  
+- The password reset targeted the **Administrator account**
+
+---
+
+## 🚨 Analysis
+
+The sequence of events suggests suspicious activity:
+
+- Creation of a new account (**hacked**)  
+- Use of administrative privileges to create the account  
+- Subsequent password reset activity involving a privileged account  
+
+This behavior may indicate:
+
+- Unauthorized account creation  
+- Privilege misuse  
+- Possible persistence mechanism by an attacker  
+
+---
+
+## 🧾 Evidence
+
+### Accessing Security Logs
+- Opened Event Viewer → Windows Logs → Security  
+
+### Filtering Account Creation Events
+- Filtered logs using **Event ID 4720**
+
+### Reviewing Event Details
+- Confirmed:
+  - Account name: hacked  
+  - Created by: Administrator  
+
+### Filtering Password Reset Events
+- Filtered logs using **Event ID 4724**
+
+### Confirming Password Reset Activity
+- Event message:
+  > "An attempt was made to reset an account’s password."
+
+- Target account:
+  - **Administrator**
+
+---
+
+## 🧠 Key Event IDs Used
+
+- **4720** → User account created  
+- **4724** → Password reset attempt  
+
+---
+
+## ✅ Conclusion
+
+The investigation revealed that a new user account (**hacked**) was created using administrative privileges, followed by password reset activity on a privileged account.  
+
+This sequence strongly suggests **potential unauthorized access and attacker persistence within the system**.
