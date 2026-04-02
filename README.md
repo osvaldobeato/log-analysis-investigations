@@ -92,7 +92,8 @@ grep "172.16.0.1" access.log | grep POST
 ## Evidence 
 Accessing the log file
 <img width="909" height="735" alt="case1-01-log-files-access" src="https://github.com/user-attachments/assets/44848217-97cd-499b-b2c2-21c1042a99ac" />
-Viewing the log contents <img width="915" height="729" alt="case1-02-log-overview" src="https://github.com/user-attachments/assets/25978763-94a8-46a3-b509-5c5713811dce" />
+Viewing the log contents 
+<img width="915" height="729" alt="case1-02-log-overview" src="https://github.com/user-attachments/assets/25978763-94a8-46a3-b509-5c5713811dce" />
 Identifying GET requests to /contact
 <img width="894" height="748" alt="case1-03-get-requests-contact" src="https://github.com/user-attachments/assets/8cfade26-ea1d-4b98-91e2-7b40f5d5b472" />
 Investigating POST requests
