@@ -14,7 +14,12 @@ The cases include analysis of both web server logs and Windows event logs, demon
 - Investigated abnormal HTTP responses
 
 ### Case 2: Windows Event Log Analysis
-- (In progress)
+- Performed security analysis of Windows Event Logs (Event Viewer)
+- Investigated account creation events using Event ID 4720
+- Identified suspicious user account "hacked" created by Administrator
+- Correlated log data to establish attack timeline
+- Detected password reset activity using Event ID 4724
+- Assessed potential privilege abuse and persistence behavior
 
 
 # Web Server Log Analysis Lab
