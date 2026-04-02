@@ -99,7 +99,7 @@ grep "172.16.0.1" access.log | grep POST
 ### Investigating POST requests
 ![POST Requests]<img width="907" height="752" alt="case1-04-post-requests-analysis" src="https://github.com/user-attachments/assets/d8e8e098-c9fd-42a5-aec6-341c944ec427" />
 ### Confirming suspicious POST activity
-1[Suspicious POST]<img width="909" height="759" alt="case1-05-suspicious-post activity" src="https://github.com/user-attachments/assets/6119c965-1804-4553-95a3-bfe92fe1b663" />
+![Suspicious POST]<img width="909" height="759" alt="case1-05-suspicious-post activity" src="https://github.com/user-attachments/assets/6119c965-1804-4553-95a3-bfe92fe1b663" />
 
 
 
