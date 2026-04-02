@@ -261,25 +261,38 @@ This behavior may indicate:
 ## 🧾 Evidence
 
 ### Accessing Security Logs
-- Opened Event Viewer → Windows Logs → Security  
+- Opened Event Viewer → Windows Logs → Security
+
+<img width="927" height="829" alt="case2-01-accessing-security-logs" src="https://github.com/user-attachments/assets/01e97228-02c4-4765-a699-31997c2caac9" />
+
 
 ### Filtering Account Creation Events
 - Filtered logs using **Event ID 4720**
 
+<img width="925" height="827" alt="case2-02-filtered-logs-using-EventID-4720" src="https://github.com/user-attachments/assets/f2d21aae-f0db-41d0-babc-374f655d8b5e" />
+
+
 ### Reviewing Event Details
 - Confirmed:
   - Account name: hacked  
-  - Created by: Administrator  
+  - Created by: Administrator
 
-### Filtering Password Reset Events
+ <img width="925" height="828" alt="case2-03-reviewing-event-details" src="https://github.com/user-attachments/assets/d6687419-1bd1-4261-b38d-10d44b420a60" />
+
+
+### Filtering Password Reset Events & Confirming Password Reset Activity
 - Filtered logs using **Event ID 4724**
-
-### Confirming Password Reset Activity
 - Event message:
   > "An attempt was made to reset an account’s password."
-
-- Target account:
+- - Target account:
   - **Administrator**
+
+<img width="924" height="829" alt="case2-04-filtered-logs-using-EventID-4724" src="https://github.com/user-attachments/assets/566d496d-e8a4-46ce-b997-a78bc94d4eb8" />
+
+
+<img width="919" height="817" alt="case2-05-target-account" src="https://github.com/user-attachments/assets/5af85fbf-d070-4b4b-812a-accd61c7ef2f" />
+
+
 
 ---
 
