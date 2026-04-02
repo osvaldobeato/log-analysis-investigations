@@ -1,3 +1,22 @@
+# Log Analysis Investigations
+
+This repository contains SOC-style log analysis investigations focused on identifying suspicious activity using real-world security analysis techniques.
+
+The cases include analysis of both web server logs and Windows event logs, demonstrating practical skills used by security analysts.
+
+---
+
+## Cases
+
+### Case 1: Web Server Log Analysis
+- Analyzed Apache access logs
+- Identified suspicious POST activity
+- Investigated abnormal HTTP responses
+
+### Case 2: Windows Event Log Analysis
+- (In progress)
+
+
 # Web Server Log Analysis Lab
 
 ## Objective
